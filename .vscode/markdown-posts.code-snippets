@@ -28,14 +28,21 @@
 		
 		"description": "description"
 	},
-		"Print to console": {
+		"New Jekyll Post": {
 	   "scope": "markdown",
-	   "prefix": "log",
+	   "prefix": "new-post",
 	   "body": [
-		   "console.log('$1');",
-		   "$2"
+		"---",
+		"layout: post",
+		"title: \"$1\"",
+		"categories: $2",
+		"tags: [$3]",
+		"author:",
+		  "  - Charles Winters",
+		"---",
+		"$0"
 	   ],
-	   "description": "Log output to console"
+	   "description": "New Post Front Matter"
 }
 }
  
